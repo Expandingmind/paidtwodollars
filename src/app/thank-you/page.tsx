@@ -1,7 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { getParticipantCount } from "@/app/actions";
+// import { getParticipantCount } from "@/app/actions"; // Temporarily removed for pure UI test
 import { GlassCard, GlowingButton } from "@/components/ui-elements";
+
+// Mock function for pure UI test without server actions
+async function getParticipantCount() {
+  return 1337;
+}
 
 export default async function ThankYou({
   searchParams,
@@ -72,4 +77,3 @@ export default async function ThankYou({
     </main>
   );
 }
-

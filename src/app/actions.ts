@@ -1,30 +1,16 @@
 "use server";
 
-import { stripe } from "@/lib/stripe";
+// MOCK SERVER ACTION - NO STRIPE DEPENDENCY
 import { redirect } from "next/navigation";
 
-// The user provided a direct Stripe Payment Link.
-const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/14A14o2I78OE79h4gg";
-
 export async function createCheckoutSession() {
-  // Simply redirect to the provided Stripe Payment Link
-  redirect(STRIPE_PAYMENT_LINK);
+  // Simulating a redirect
+  console.log("Mock checkout session created");
+  // For visual testing, we can redirect to a mock success page or back to home
+  // redirect("/?mock_success=true");
 }
 
 export async function getParticipantCount() {
-  try {
-    // We search for payment intents that are succeeded.
-    // Ideally we would filter by a specific Product ID or Price ID to avoid counting other sales.
-    // query: 'status:\'succeeded\' AND metadata[\'product_name\']:\'Paid Two Dollars\''
-    // But since we don't have metadata set up on the link yet, we'll count all succeeded payments.
-    const result = await stripe.paymentIntents.search({
-      query: 'status:\'succeeded\'',
-      limit: 1, // We only need the total count
-    });
-
-    return result.total_count || 0;
-  } catch (error) {
-    console.error("Error fetching participant count:", error);
-    return 0; 
-  }
+  // Return a static number for visual testing
+  return 42;
 }
