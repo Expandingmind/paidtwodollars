@@ -173,13 +173,17 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <GlassCard className="relative h-[400px] flex flex-col justify-between p-8 overflow-hidden group bg-[#08080c]">
+            <GlassCard className="relative h-[400px] flex flex-col justify-between p-10 overflow-hidden group bg-[#08080c]">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
-                  <span className="text-purple-400 font-bold text-xl">1</span>
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:bg-purple-500/20 transition-colors duration-500">
+                  {/* Minimalistic Credit Card Icon */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-purple-400">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <line x1="2" y1="10" x2="22" y2="10" />
+                  </svg>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-white">Pay $2</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
+                <h3 className="text-3xl font-bold mb-4 text-white">Pay $2</h3>
+                <p className="text-white/50 text-lg leading-relaxed">
                   Contribute a tiny amount securely via Stripe to join the experiment.
                 </p>
               </div>
@@ -187,21 +191,19 @@ export default function Home() {
               {/* Purple Island Beam Effect */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[200px] bg-gradient-to-t from-purple-600/20 via-purple-900/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
               <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[80%] h-[40px] bg-purple-500/30 blur-[40px] rounded-full"></div>
-              
-              {/* Decorative Graphic */}
-              <div className="absolute bottom-10 right-10 w-24 h-24 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-full h-full text-purple-500"><path d="M12 2L2 7L12 12L22 7L12 2Z" strokeWidth="1"/><path d="M2 17L12 22L22 17" strokeWidth="1"/><path d="M2 12L12 17L22 12" strokeWidth="1"/></svg>
-              </div>
             </GlassCard>
 
             {/* Card 2 */}
-            <GlassCard className="relative h-[400px] flex flex-col justify-between p-8 overflow-hidden group bg-[#08080c]">
+            <GlassCard className="relative h-[400px] flex flex-col justify-between p-10 overflow-hidden group bg-[#08080c]">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400"><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/><path d="M12 12L12 16"/><path d="M12 8H12.01"/></svg>
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:bg-purple-500/20 transition-colors duration-500">
+                  {/* Minimalistic Key Icon */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-purple-400">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-white">Unlock</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
+                <h3 className="text-3xl font-bold mb-4 text-white">Unlock</h3>
+                <p className="text-white/50 text-lg leading-relaxed">
                   Instantly get redirected to the live counter page after payment.
                 </p>
               </div>
@@ -216,13 +218,17 @@ export default function Home() {
             </GlassCard>
 
             {/* Card 3 */}
-            <GlassCard className="relative h-[400px] flex flex-col justify-between p-8 overflow-hidden group bg-[#08080c]">
+            <GlassCard className="relative h-[400px] flex flex-col justify-between p-10 overflow-hidden group bg-[#08080c]">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400"><path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:bg-purple-500/20 transition-colors duration-500">
+                  {/* Minimalistic Eye Icon */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-purple-400">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2 text-white">Reveal</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
+                <h3 className="text-3xl font-bold mb-4 text-white">Reveal</h3>
+                <p className="text-white/50 text-lg leading-relaxed">
                   See exactly how many people have paid before you.
                 </p>
               </div>
