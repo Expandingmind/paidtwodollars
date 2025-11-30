@@ -4,11 +4,15 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { GlowingButton, GlassCard, AccordionItem } from "@/components/ui-elements";
 
+// Direct link to Stripe Payment
+const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/14A14o2I78OE79h4gg";
+
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  const handlePayClick = async () => {
-    alert("Stripe integration is momentarily disabled. We are restoring visuals first.");
+  const handlePayClick = () => {
+    // Direct client-side redirect to Stripe
+    window.location.href = STRIPE_PAYMENT_LINK;
   };
 
   const toggleFaq = (index: number) => {
@@ -40,7 +44,7 @@ export default function Home() {
            <button onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth'})} className="hover:text-white transition-colors">FAQ</button>
          </div>
          <GlowingButton onClick={handlePayClick} className="px-6 py-2 text-sm bg-transparent border border-white/20 hover:bg-white/5 shadow-none">
-            Login
+            Pay $2 to Join
          </GlowingButton>
       </nav>
 
@@ -70,16 +74,22 @@ export default function Home() {
                {/* Glow behind the bill */}
                <div className="absolute -inset-4 bg-green-500/20 blur-xl rounded-full opacity-50 animate-pulse-slow pointer-events-none"></div>
                
-               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl">
+               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10]">
+                  {/* Placeholder fallback text if image fails loading */}
+                  <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm font-mono z-0">
+                     [ Two Dollar Bill ]
+                  </div>
+                  
                   <Image 
                     src="/two-dollar-bill.jpg" 
                     alt="Two Dollar Bill" 
                     width={600} 
                     height={250} 
-                    className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                    className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
+                    priority
                   />
                   {/* Subtle overlay gradient for integration */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-30 z-20"></div>
                </div>
             </div>
             
