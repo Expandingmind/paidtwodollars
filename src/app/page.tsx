@@ -63,9 +63,9 @@ export default function Home() {
 
           <div className="space-y-6 max-w-4xl animate-fade-in-up z-20 flex flex-col items-center">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-white">
-              Pay $2 to See <br />
+              How Many People Paid $2? <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-purple-100 to-white">
-                How Many Paid $2
+                Pay $2 to Find Out.
               </span>
             </h1>
             
