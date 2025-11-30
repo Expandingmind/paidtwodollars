@@ -55,7 +55,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF41] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00FF41]"></span>
             </span>
-            Join the global experiment
+            Escape the matrix loonie toon ass nigga
           </div>
 
           <div className="space-y-6 max-w-4xl animate-fade-in-up z-20 flex flex-col items-center">

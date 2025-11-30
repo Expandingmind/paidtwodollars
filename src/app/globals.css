@@ -14,17 +14,11 @@ body {
   min-height: 100vh;
 }
 
-/* Custom scrollbar for a cleaner look */
+/* Hide scrollbar completely */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
-::-webkit-scrollbar-track {
-  background: #000000;
-}
-::-webkit-scrollbar-thumb {
-  background: #00FF41;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #00cc33;
+/* Optional: For Firefox */
+html {
+  scrollbar-width: none;
 }
