@@ -75,7 +75,7 @@ export default function Home() {
                <div className="absolute -inset-4 bg-purple-500/40 blur-2xl rounded-full opacity-100 transition-all duration-500 animate-pulse-slow pointer-events-none"></div>
                
                {/* Container with float animation on hover */}
-               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10] transition-all duration-500 shadow-[0_0_60px_rgba(168,85,247,0.5)] border-purple-400/40 group-hover:animate-float">
+               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10] transition-all duration-500 shadow-[0_0_60px_rgba(168,85,247,0.5)] border-purple-400/40 animate-float">
                   {/* Placeholder fallback text if image fails loading */}
                   <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm font-mono z-0">
                      [ Two Dollar Bill ]
