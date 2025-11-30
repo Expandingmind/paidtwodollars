@@ -81,7 +81,7 @@ export default function Home() {
                   </div>
                   
                   <Image 
-                    src="/$2bill.png" 
+                    src="/two-dollar-bill-v2.png" 
                     alt="Two Dollar Bill" 
                     width={600} 
                     height={250} 
