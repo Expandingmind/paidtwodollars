@@ -70,11 +70,11 @@ export default function Home() {
             </h1>
             
             {/* The $2 Bill Image - Placed exactly under the headline */}
-            <div className="relative my-8 w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500">
+            <div className="relative my-8 w-full max-w-lg mx-auto group">
                {/* Glow behind the bill */}
-               <div className="absolute -inset-4 bg-green-500/20 blur-xl rounded-full opacity-50 animate-pulse-slow pointer-events-none"></div>
+               <div className="absolute -inset-4 bg-purple-500/20 blur-2xl rounded-full opacity-50 group-hover:opacity-80 transition-all duration-500 animate-pulse-slow pointer-events-none"></div>
                
-               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10]">
+               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10] transition-all duration-500 group-hover:shadow-[0_0_50px_rgba(168,85,247,0.4)] group-hover:border-purple-400/30">
                   {/* Placeholder fallback text if image fails loading */}
                   <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm font-mono z-0">
                      [ Two Dollar Bill ]
@@ -85,11 +85,14 @@ export default function Home() {
                     alt="Two Dollar Bill" 
                     width={600} 
                     height={250} 
-                    className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
+                    className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 relative z-10"
                     priority
                   />
                   {/* Subtle overlay gradient for integration */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-30 z-20"></div>
+                  
+                  {/* Hover illumination overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/0 via-purple-400/10 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30 mix-blend-overlay pointer-events-none"></div>
                </div>
             </div>
             
