@@ -10,12 +10,14 @@ export function GlowingButton({ children, className = "", fullWidth = false, ...
     <button
       className={`
         relative group overflow-hidden rounded-full 
-        bg-gradient-to-r from-purple-600 to-indigo-600 
-        text-white font-semibold text-lg
+        bg-gradient-to-r from-[#8B5CF6] to-[#6D28D9]
+        text-white font-semibold text-sm md:text-base tracking-wide
         transition-all duration-300 ease-out
-        hover:scale-105 hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]
+        hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]
+        active:scale-95
         disabled:opacity-50 disabled:cursor-not-allowed
-        ${fullWidth ? "w-full" : "px-8 py-4"}
+        border border-white/10
+        ${fullWidth ? "w-full" : "px-8 py-3"}
         ${className}
       `}
       {...props}
@@ -23,7 +25,8 @@ export function GlowingButton({ children, className = "", fullWidth = false, ...
       <span className="relative z-10 flex items-center justify-center gap-2">
         {children}
       </span>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-violet-600 to-fuchsia-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      {/* Inner highlight */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </button>
   );
 }
@@ -37,14 +40,23 @@ export function GlassCard({ children, className = "" }: GlassCardProps) {
   return (
     <div
       className={`
-        relative overflow-hidden rounded-2xl border border-white/10 
-        bg-white/5 backdrop-blur-lg 
-        shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
-        transition-all duration-300 hover:border-purple-500/30 hover:bg-white/10
+        relative overflow-hidden rounded-3xl 
+        border border-[#2a2a35]
+        bg-[#0a0a10]/80 backdrop-blur-xl
+        shadow-[0_0_0_1px_rgba(255,255,255,0.05)]
+        transition-all duration-500 
+        hover:border-[#8B5CF6]/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]
+        group
         ${className}
       `}
     >
-      {children}
+      {/* Inner gradient glow on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      
+      {/* Content container */}
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 }
@@ -58,28 +70,15 @@ interface AccordionItemProps {
 
 export function AccordionItem({ question, answer, isOpen, onClick }: AccordionItemProps) {
   return (
-    <div className="mb-4 rounded-xl overflow-hidden border border-white/10 bg-white/5">
+    <div className="mb-4 rounded-xl overflow-hidden border border-white/5 bg-white/[0.02] transition-colors hover:bg-white/[0.04]">
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-white/5"
+        className="flex w-full items-center justify-between px-6 py-4 text-left"
       >
         <span className="text-lg font-medium text-white/90">{question}</span>
-        <span className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-purple-400"
-          >
-            <path
-              d="M6 9L12 15L18 9"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+        <span className={`transform transition-transform duration-300 text-purple-400 ${isOpen ? "rotate-180" : ""}`}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M6 9L12 15L18 9" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </span>
       </button>
@@ -89,9 +88,10 @@ export function AccordionItem({ question, answer, isOpen, onClick }: AccordionIt
           ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
         `}
       >
-        <div className="px-6 pb-4 text-white/70">{answer}</div>
+        <div className="px-6 pb-6 text-white/60 leading-relaxed">
+          {answer}
+        </div>
       </div>
     </div>
   );
 }
-
