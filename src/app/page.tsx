@@ -150,7 +150,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                From Curiosity to <br /><span className="text-[#A78BFA]">Insight</span> in 3 Steps
+                Scratch that itch, <br />you'll make it back. <span className="text-[#A78BFA]">Right?</span>
               </h2>
             </div>
             <div className="max-w-md">
