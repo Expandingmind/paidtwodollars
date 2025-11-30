@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { GlowingButton, GlassCard, AccordionItem } from "@/components/ui-elements";
 
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Hero Section */}
-        <section className="min-h-[85vh] flex flex-col items-center justify-center text-center pt-10 pb-20">
+        <section className="min-h-[85vh] flex flex-col items-center justify-center text-center pt-10 pb-20 relative">
           
           {/* Pill Label */}
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-200 text-sm font-medium animate-fade-in backdrop-blur-md">
@@ -56,13 +57,31 @@ export default function Home() {
             Join the global experiment
           </div>
 
-          <div className="space-y-6 max-w-4xl animate-fade-in-up z-20">
+          <div className="space-y-6 max-w-4xl animate-fade-in-up z-20 flex flex-col items-center">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-white">
               Pay $2 to See <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-purple-100 to-white">
                 How Many Paid $2
               </span>
             </h1>
+            
+            {/* The $2 Bill Image - Placed exactly under the headline */}
+            <div className="relative my-8 w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500">
+               {/* Glow behind the bill */}
+               <div className="absolute -inset-4 bg-green-500/20 blur-xl rounded-full opacity-50 animate-pulse-slow pointer-events-none"></div>
+               
+               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl">
+                  <Image 
+                    src="/two-dollar-bill.jpg" 
+                    alt="Two Dollar Bill" 
+                    width={600} 
+                    height={250} 
+                    className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  {/* Subtle overlay gradient for integration */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-30"></div>
+               </div>
+            </div>
             
             <p className="text-lg md:text-xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed">
               Curiosity is a powerful force. Are you willing to pay the price of a coffee to satisfy it? 
@@ -83,43 +102,32 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Wireframe Orb Graphic */}
-          <div className="relative mt-[-50px] md:mt-[-100px] w-[100%] h-[400px] md:h-[600px] pointer-events-none select-none z-10 flex items-center justify-center opacity-90">
+          {/* Wireframe Orb Graphic - Moved lower/behind to accommodate bill */}
+          <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[100%] h-[600px] pointer-events-none select-none z-0 flex items-center justify-center opacity-60">
             
             {/* Central Glow */}
-            <div className="absolute w-[200px] h-[200px] rounded-full bg-purple-600/40 blur-[80px]" />
+            <div className="absolute w-[200px] h-[200px] rounded-full bg-purple-600/20 blur-[80px]" />
 
             {/* SVG Wireframe Sphere Representation */}
-            <svg viewBox="0 0 200 200" className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] animate-pulse-slow">
+            <svg viewBox="0 0 200 200" className="w-[500px] h-[500px] animate-pulse-slow">
               <defs>
                 <radialGradient id="sphere-grad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="rgba(139, 92, 246, 0.2)" />
+                  <stop offset="0%" stopColor="rgba(139, 92, 246, 0.1)" />
                   <stop offset="100%" stopColor="rgba(139, 92, 246, 0.0)" />
                 </radialGradient>
               </defs>
               
               {/* Main Sphere Body */}
-              <circle cx="100" cy="100" r="70" fill="url(#sphere-grad)" stroke="rgba(167, 139, 250, 0.3)" strokeWidth="0.5" />
+              <circle cx="100" cy="100" r="70" fill="url(#sphere-grad)" stroke="rgba(167, 139, 250, 0.2)" strokeWidth="0.5" />
               
               {/* Latitude Lines */}
-              <ellipse cx="100" cy="100" rx="70" ry="20" fill="none" stroke="rgba(167, 139, 250, 0.2)" strokeWidth="0.5" />
-              <ellipse cx="100" cy="100" rx="70" ry="45" fill="none" stroke="rgba(167, 139, 250, 0.2)" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="70" ry="20" fill="none" stroke="rgba(167, 139, 250, 0.1)" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="70" ry="45" fill="none" stroke="rgba(167, 139, 250, 0.1)" strokeWidth="0.5" />
               
               {/* Longitude Lines (simulated) */}
-              <ellipse cx="100" cy="100" rx="20" ry="70" fill="none" stroke="rgba(167, 139, 250, 0.2)" strokeWidth="0.5" />
-              <ellipse cx="100" cy="100" rx="45" ry="70" fill="none" stroke="rgba(167, 139, 250, 0.2)" strokeWidth="0.5" />
-
-              {/* Glowing Nodes */}
-              <circle cx="30" cy="100" r="2" fill="#fff" className="animate-pulse" />
-              <circle cx="170" cy="100" r="2" fill="#fff" className="animate-pulse" />
-              <circle cx="100" cy="30" r="2" fill="#fff" className="animate-pulse" />
-              <circle cx="100" cy="170" r="2" fill="#fff" className="animate-pulse" />
+              <ellipse cx="100" cy="100" rx="20" ry="70" fill="none" stroke="rgba(167, 139, 250, 0.1)" strokeWidth="0.5" />
+              <ellipse cx="100" cy="100" rx="45" ry="70" fill="none" stroke="rgba(167, 139, 250, 0.1)" strokeWidth="0.5" />
             </svg>
-
-            {/* Orbital Rings */}
-            <div className="absolute w-[350px] h-[350px] md:w-[550px] md:h-[550px] border border-white/5 rounded-full animate-[spin_20s_linear_infinite]" />
-            <div className="absolute w-[500px] h-[500px] md:w-[700px] md:h-[700px] border border-white/5 rounded-full opacity-50 animate-[spin_30s_linear_infinite_reverse]" />
-            
           </div>
         </section>
 
