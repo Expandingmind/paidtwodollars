@@ -71,11 +71,11 @@ export default function Home() {
             
             {/* The $2 Bill Image - Placed exactly under the headline */}
             <div className="relative my-8 w-full max-w-lg mx-auto group">
-               {/* Glow behind the bill - Permanent light glow, intensifies on hover */}
-               <div className="absolute -inset-4 bg-purple-500/30 blur-2xl rounded-full opacity-60 group-hover:opacity-90 transition-all duration-500 animate-pulse-slow pointer-events-none"></div>
+               {/* Glow behind the bill - Permanent strong glow */}
+               <div className="absolute -inset-4 bg-purple-500/40 blur-2xl rounded-full opacity-100 transition-all duration-500 animate-pulse-slow pointer-events-none"></div>
                
                {/* Container with float animation on hover */}
-               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10] transition-all duration-500 group-hover:shadow-[0_0_60px_rgba(168,85,247,0.5)] group-hover:border-purple-400/40 group-hover:animate-float">
+               <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a10] transition-all duration-500 shadow-[0_0_60px_rgba(168,85,247,0.5)] border-purple-400/40 group-hover:animate-float">
                   {/* Placeholder fallback text if image fails loading */}
                   <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm font-mono z-0">
                      [ Two Dollar Bill ]
@@ -92,8 +92,8 @@ export default function Home() {
                   {/* Subtle overlay gradient for integration */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-20 z-20"></div>
                   
-                  {/* Permanent illumination overlay - varying intensity */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-purple-400/20 to-white/5 opacity-100 transition-opacity duration-500 z-30 mix-blend-overlay pointer-events-none"></div>
+                  {/* Permanent illumination overlay - Strong and always visible */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 via-purple-400/30 to-white/10 opacity-100 z-30 mix-blend-overlay pointer-events-none"></div>
                </div>
             </div>
             
