@@ -13,10 +13,11 @@ export function GlowingButton({ children, className = "", fullWidth = false, ...
         bg-gradient-to-r from-[#8B5CF6] to-[#6D28D9]
         text-white font-semibold text-sm md:text-base tracking-wide
         transition-all duration-300 ease-out
-        hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.6)]
+        hover:scale-105 
+        hover:shadow-[0_0_25px_rgba(139,92,246,0.6),0_0_10px_rgba(139,92,246,0.4)_inset]
+        border border-purple-400/30 hover:border-purple-300
         active:scale-95
         disabled:opacity-50 disabled:cursor-not-allowed
-        border border-white/10
         ${fullWidth ? "w-full" : "px-8 py-3"}
         ${className}
       `}
@@ -27,6 +28,9 @@ export function GlowingButton({ children, className = "", fullWidth = false, ...
       </span>
       {/* Inner highlight */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      {/* Pulsing Glow Effect */}
+      <div className="absolute -inset-1 rounded-full bg-purple-500/20 blur-md group-hover:bg-purple-500/40 transition-all duration-300 -z-20"></div>
     </button>
   );
 }
