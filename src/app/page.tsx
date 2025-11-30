@@ -5,7 +5,7 @@ import Image from "next/image";
 import { GlowingButton, GlassCard, AccordionItem } from "@/components/ui-elements";
 
 // Direct link to Stripe Payment
-const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/14A14o2I78OE79h4gg";
+const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/14A14o2I78OE79h42948039";
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
