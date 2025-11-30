@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        matrix: {
+          DEFAULT: "#00FF41",
+          dim: "#003B00", // Darker green for backgrounds/gradients
+          glow: "#0D0208", // Very dark background
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

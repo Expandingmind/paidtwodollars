@@ -4,17 +4,13 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 2, 2, 5; /* Darker Stardust black */
+  --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #020205;
-  /* Create the overall ambient gradient */
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
-    radial-gradient(circle at 100% 0%, rgba(76, 29, 149, 0.1) 0%, transparent 50%);
+  background-color: #000000;
   min-height: 100vh;
 }
 
@@ -23,12 +19,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #020205;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #00FF41;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #00cc33;
 }
