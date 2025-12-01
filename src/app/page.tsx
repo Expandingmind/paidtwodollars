@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % COUNT_WORDS.length);
-    }, 2000); // Change every 2 seconds
+    }, 200); // Change every 0.2 seconds
 
     return () => clearInterval(interval);
   }, []);
