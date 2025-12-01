@@ -107,7 +107,7 @@ export default function Home() {
             
             <p className="text-lg md:text-xl text-[#00FF41]/70 font-light max-w-2xl mx-auto leading-relaxed font-mono">
               Curiosity is a powerful force. Are you willing to pay the price of a coffee to satisfy it? 
-              Join <span className="inline-block min-w-[100px] text-[#00FF41] font-bold animate-pulse text-center">{COUNT_WORDS[wordIndex]}</span> of others in this unique social experiment.
+              Join <span className="inline-block min-w-[100px] text-[#00FF41] font-bold animate-pulse text-center">{COUNT_WORDS[wordIndex]}</span> in this unique social experiment.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
