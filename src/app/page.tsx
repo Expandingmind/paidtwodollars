@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-6 max-w-4xl animate-fade-in-up z-20 flex flex-col items-center">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.2] text-white max-w-3xl">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.2] text-white max-w-3xl">
               How Many People Paid $2? <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FF41] via-[#80FF9D] to-white drop-shadow-[0_0_10px_rgba(0,255,65,0.5)]">
                 Pay $2 to Find Out.
