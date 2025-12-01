@@ -279,10 +279,11 @@ export default function Home() {
                   <p className="text-xl font-bold self-start">This you?</p>
                   <div className="relative w-64 h-64 rounded-lg overflow-hidden border border-[#00FF41]/20 bg-black">
                     <Image 
-                      src="/begger.jpg" 
+                      src="/beggar.jpg" 
                       alt="Beggar" 
                       fill
                       className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                      unoptimized
                     />
                   </div>
                 </div>
