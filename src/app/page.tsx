@@ -162,9 +162,6 @@ export default function Home() {
               </h2>
             </div>
             <div className="max-w-md">
-              <p className="text-[#00FF41]/50 text-lg mb-6 font-mono">
-                The process is intentionally simple. No accounts, no hidden fees, just pure curiosity. Join the experiment in seconds.
-              </p>
               <div className="flex gap-4">
                 <GlowingButton onClick={handlePayClick} className="px-6 py-2 text-sm">
                   Pay $2 to Join
