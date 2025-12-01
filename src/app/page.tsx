@@ -276,13 +276,13 @@ export default function Home() {
               question="Can I get a refund?"
               answer={
                 <div className="flex flex-col gap-4">
-                  <p>Since the value (seeing the count) is delivered immediately, all sales are final.</p>
+                  <p className="text-xl font-bold">This you?</p>
                   <div className="relative w-full h-64 rounded-lg overflow-hidden border border-[#00FF41]/20">
                     <Image 
                       src="/begger.jpg" 
                       alt="Beggar" 
                       fill
-                      className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                      className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"
                     />
                   </div>
                 </div>
