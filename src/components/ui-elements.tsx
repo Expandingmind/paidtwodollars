@@ -67,7 +67,7 @@ export function GlassCard({ children, className = "" }: GlassCardProps) {
 
 interface AccordionItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onClick: () => void;
 }

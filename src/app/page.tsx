@@ -273,7 +273,19 @@ export default function Home() {
             />
             <AccordionItem
               question="Can I get a refund?"
-              answer="Since the value (seeing the count) is delivered immediately, all sales are final."
+              answer={
+                <div className="flex flex-col gap-4">
+                  <p>Since the value (seeing the count) is delivered immediately, all sales are final.</p>
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden border border-[#00FF41]/20">
+                    <Image 
+                      src="/begger.jpg" 
+                      alt="Beggar" 
+                      fill
+                      className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                    />
+                  </div>
+                </div>
+              }
               isOpen={openFaqIndex === 2}
               onClick={() => toggleFaq(2)}
             />
