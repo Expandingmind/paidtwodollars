@@ -286,8 +286,8 @@ export default function Home() {
             PaidTwoDollars
           </div>
           <div className="flex gap-6 font-mono">
-             <a href="#" className="hover:text-[#00FF41] transition-colors">Privacy</a>
-             <a href="#" className="hover:text-[#00FF41] transition-colors">Terms</a>
+             <Link href="/privacy" className="hover:text-[#00FF41] transition-colors">Privacy</Link>
+             <Link href="/terms" className="hover:text-[#00FF41] transition-colors">Terms</Link>
              <span>&copy; {new Date().getFullYear()}</span>
           </div>
         </footer>
