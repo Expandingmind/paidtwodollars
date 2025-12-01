@@ -275,14 +275,14 @@ export default function Home() {
             <AccordionItem
               question="Can I get a refund?"
               answer={
-                <div className="flex flex-col gap-4">
-                  <p className="text-xl font-bold">This you?</p>
-                  <div className="relative w-full h-64 rounded-lg overflow-hidden border border-[#00FF41]/20">
+                <div className="flex flex-col gap-4 items-center">
+                  <p className="text-xl font-bold self-start">This you?</p>
+                  <div className="relative w-64 h-64 rounded-lg overflow-hidden border border-[#00FF41]/20 bg-black">
                     <Image 
                       src="/begger.jpg" 
                       alt="Beggar" 
                       fill
-                      className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"
+                      className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                     />
                   </div>
                 </div>
