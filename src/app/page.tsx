@@ -1,14 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { GlowingButton, GlassCard, AccordionItem } from "@/components/ui-elements";
 
 // Direct link to Stripe Payment
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/14A14o2I78OE79h42948039";
 
+const COUNT_WORDS = ["tens", "hundreds", "thousands", "millions", "billions"];
+
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [wordIndex, setWordIndex] = useState(2); // Start at "thousands"
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % COUNT_WORDS.length);
+    }, 2000); // Change every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePayClick = () => {
     // Direct client-side redirect to Stripe
@@ -96,7 +107,7 @@ export default function Home() {
             
             <p className="text-lg md:text-xl text-[#00FF41]/70 font-light max-w-2xl mx-auto leading-relaxed font-mono">
               Curiosity is a powerful force. Are you willing to pay the price of a coffee to satisfy it? 
-              Join thousands of others in this unique social experiment.
+              Join <span className="inline-block min-w-[100px] text-[#00FF41] font-bold animate-pulse text-center">{COUNT_WORDS[wordIndex]}</span> of others in this unique social experiment.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
