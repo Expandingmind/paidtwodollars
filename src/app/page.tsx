@@ -44,22 +44,22 @@ export default function Home() {
       {/* Bottom-right subtle glow */}
       <div className="fixed bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-[#003311]/20 blur-[120px] pointer-events-none z-0" />
 
-      <nav className="relative z-50 flex items-center justify-between px-6 py-6 max-w-7xl mx-auto">
-         <div className="flex items-center gap-2 font-bold text-xl tracking-tight">
+      <nav className="relative z-50 flex items-center justify-between px-4 md:px-6 py-4 md:py-6 max-w-7xl mx-auto">
+         <div className="flex items-center gap-2 font-bold text-lg md:text-xl tracking-tight shrink-0">
            <span className="text-[#00FF41] drop-shadow-[0_0_5px_rgba(0,255,65,0.8)]">PaidTwoDollars</span>
          </div>
          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#00FF41]/60">
            <button onClick={scrollToHowItWorks} className="hover:text-[#00FF41] transition-colors hover:drop-shadow-[0_0_5px_rgba(0,255,65,0.5)]">How It Works</button>
            <button onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth'})} className="hover:text-[#00FF41] transition-colors hover:drop-shadow-[0_0_5px_rgba(0,255,65,0.5)]">FAQ</button>
          </div>
-         <GlowingButton onClick={handlePayClick} className="px-6 py-2 text-sm bg-transparent border border-[#00FF41]/20 hover:bg-[#00FF41]/10 shadow-none text-[#00FF41]">
+         <GlowingButton onClick={handlePayClick} className="px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm bg-transparent border border-[#00FF41]/20 hover:bg-[#00FF41]/10 shadow-none text-[#00FF41] shrink-0">
             Pay $2 to Join
          </GlowingButton>
       </nav>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         {/* Hero Section */}
-        <section className="min-h-[85vh] flex flex-col items-center justify-center text-center pt-10 pb-20 relative">
+        <section className="min-h-[80vh] md:min-h-[85vh] flex flex-col items-center justify-center text-center pt-12 pb-20 md:pt-10 relative">
           
           {/* Pill Label */}
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00FF41]/30 bg-[#00FF41]/10 text-[#00FF41] text-sm font-medium animate-fade-in backdrop-blur-md box-shadow-[0_0_10px_rgba(0,255,65,0.2)]">
